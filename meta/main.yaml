@@ -4,6 +4,7 @@ dependencies:
     version: v1.1.5
 
 galaxy_info:
+  role_name: flux
   author: Nicholas Wilde
   description: Install Flux role
   license: Apache-2.0
