@@ -4,7 +4,7 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![GitHub](https://img.shields.io/github/license/nicholaswilde/ansible-role-flux)](https://github.com/nicholaswilde/ansible-role-flux/blob/main/LICENSE)
 
-This role installs the [Flux](https://helm.sh) binary on any supported host.
+This role installs the [Flux](https://github.com/fluxcd/flux2/) binary on any supported host.
 
 ## Requirements
 
@@ -18,11 +18,11 @@ Available variables are listed below, along with default values (see [defaults/m
     app_platform: linux
     app_arch: amd64
 
-Controls for the version of Helm to be installed. See [available Flux releases](https://github.com/fluxcd/flux2/releases/). You can upgrade or downgrade versions by changing the `app_ver`.
+Controls for the version of Helm to be installed. See [available flux2 releases](https://github.com/fluxcd/flux2/releases/). You can upgrade or downgrade versions by changing the `app_ver`.
 
     app_install_dir: /usr/local/bin
 
-The location where the Flux binary will be installed.
+The location where the flux2 binary will be installed.
 
 ## Dependencies
 
@@ -36,7 +36,7 @@ Install dependencies
 
     - hosts: all
       roles:
-        - role: nicholaswilde.flux
+        - role: nicholaswilde.flux2
 
 ## Testing
 
@@ -44,8 +44,8 @@ If you want to use [moleculte](https://molecule.readthedocs.io/en/latest/install
 
 ```
 # Checkout
-$ git clone https://github.com/nicholaswilde/ansible-role-flux.git nicholaswilde.flux
-$ cd nicholaswilde.flux
+$ git clone https://github.com/nicholaswilde/ansible-role-flux.git nicholaswilde.flux2
+$ cd nicholaswilde.flux2
 # Test
 $ molecule test
 # Converge
