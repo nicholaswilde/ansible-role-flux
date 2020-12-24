@@ -45,6 +45,8 @@ jobs:
           - centos8
           - ubuntu2004
           - debian10
+          - fedora33
+          - amazonlinux2
 
     steps:
       - name: Check out the codebase.
