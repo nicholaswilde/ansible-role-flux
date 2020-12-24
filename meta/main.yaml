@@ -35,3 +35,11 @@ galaxy_info:
         - bionic
         - focal
         - xenial
+  galaxy_tags:
+    - flux
+    - fluxctl
+    - flux2
+    - fluxcd
+    - kubernetes
+    - gitops
+    - cluster
