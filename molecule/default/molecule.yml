@@ -1,6 +1,8 @@
 ---
 dependency:
   name: galaxy
+  options:
+    role-file: ../../requirements.yaml
 driver:
   name: docker
 platforms:
