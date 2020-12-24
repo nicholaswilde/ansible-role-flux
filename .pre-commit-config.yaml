@@ -13,3 +13,8 @@ repos:
         name: Run ansible-lint
         description: Lint ansible files
         exclude: ansible/group_vars|ansible/vault_vars
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: master
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
