@@ -1,0 +1,61 @@
+---
+- name: Resolve platform specific variables
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+
+- name: Check if app exists in {{ app_binary_dir }}...
+  become: true
+  stat:
+    path: '{{ app_binary_dir }}'
+  changed_when: false
+  register: app_binary
+
+- when: not app_binary.stat.exists
+  block:
+    - name: Download the archive file.
+      become: true
+      become_user: root
+      get_url:
+        url: '{{ app_url }}'
+        dest: /tmp/{{ app_archive }}
+        checksum: '{{ app_checksum }}'
+        mode: 0644
+
+    - name: mkdir {{ app_binary_dir }}
+      become: true
+      become_user: root
+      file:
+        path: '{{ app_binary_dir }}'
+        state: directory
+        mode: 0755
+
+    - name: Unarchive /tmp/{{ app_archive }}
+      become: true
+      unarchive:
+        remote_src: true
+        src: /tmp/{{ app_archive }}
+        dest: '{{ app_binary_dir }}'
+        creates: '{{ app_install_exe }}'
+  always:
+
+    - name: Remove /tmp/{{ app_archive }}
+      become: true
+      become_user: root
+      file:
+        path: /tmp/{{ app_archive }}
+        state: absent
+
+- name: Make a link
+  file:
+    src: '{{ app_install_exe }}'
+    dest: '{{ app_install_link }}'
+    state: link
+  become: true
+  become_user: root
