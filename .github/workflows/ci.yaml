@@ -10,7 +10,7 @@ name: CI
 
 defaults:
   run:
-    working-directory: 'nicholaswilde.flux'
+    working-directory: 'nicholaswilde.flux2'
 
 jobs:
 
@@ -21,7 +21,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: 'nicholaswilde.flux'
+          path: 'nicholaswilde.flux2'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
@@ -52,7 +52,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: 'nicholaswilde.flux'
+          path: 'nicholaswilde.flux2'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
