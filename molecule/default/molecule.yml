@@ -2,7 +2,7 @@
 dependency:
   name: galaxy
   options:
-    role-file: ../../requirements.yaml
+    role-file: requirements.yaml
 driver:
   name: docker
 platforms:
@@ -22,7 +22,7 @@ scenario:
   test_sequence:
     - lint
     - destroy
-    # - dependency
+    - dependency
     - syntax
     - create
     # - prepare
