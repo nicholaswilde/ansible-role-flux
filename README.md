@@ -15,7 +15,7 @@ N/A
 
 Available variables are listed below, along with default values (see [defaults/main.yaml](./defaults/main.yaml)):
 
-    app_ver: '0.5.7'
+    app_ver: '0.5.8'
     app_platform: linux
     app_arch: amd64
 
@@ -41,7 +41,7 @@ Install dependencies
 
 ## Testing
 
-If you want to use [moleculte](https://molecule.readthedocs.io/en/latest/installation.html) to test, be sure to check out the repo in a folder titled `nicholaswilde.flux`
+If you want to use [moleculte](https://molecule.readthedocs.io/en/latest/installation.html) to test, be sure to check out the repo in a folder titled `nicholaswilde.flux2`
 
 ```
 # Checkout

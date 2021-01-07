@@ -1,6 +1,6 @@
 ---
 # defaults file for the app
-app_ver: 0.5.7
+app_ver: 0.5.8
 app_os: linux
 app_arch: amd64
 
@@ -14,6 +14,19 @@ app_install_dir: /usr/local/bin
 app_use_online_checksum: true
 
 app_checksums:
+  '0.5.8':
+    # https://github.com/fluxcd/flux2/releases/download/v0.5.8/flux_0.5.8_darwin_amd64.tar.gz
+    darwin_amd64: sha256:901fc72901422354c63bca7ae1cb65c0044bd3a2945b156647c3c58418916783
+    # https://github.com/fluxcd/flux2/releases/download/v0.5.8/flux_0.5.8_linux_amd64.tar.gz
+    linux_amd64: sha256:ff268651004aa70d7612124c94377225edeb3eed28cdf23e206eb7f0a2560ba5
+    # https://github.com/fluxcd/flux2/releases/download/v0.5.8/flux_0.5.8_linux_arm64.tar.gz
+    linux_arm64: sha256:6ce85bc5b66da50ffb5ab2baeb38cc90fae3f54c5f2359ef30517b529af3005b
+    # https://github.com/fluxcd/flux2/releases/download/v0.5.8/flux_0.5.8_linux_arm.tar.gz
+    linux_arm: sha256:fcbb7b96b577fc9f863d0a566e2945a77ecbf51a65a08be2d1808307c8cf7a88
+    # https://github.com/fluxcd/flux2/releases/download/v0.5.8/flux_0.5.8_windows_386.zip
+    windows_386: sha256:cde1fe4af767c43da88c1db161fd385f1c2ab433ac8b25a0f3eb4f23024bef91
+    # https://github.com/fluxcd/flux2/releases/download/v0.5.8/flux_0.5.8_windows_amd64.zip
+    windows_amd64: sha256:b2a4bc02becb5d961e3b72c8f6073ccb9f652d3644d839ace54f6ea8ff5d9465
   '0.5.7':
     # https://github.com/fluxcd/flux2/releases/download/v0.5.7/flux_0.5.7_darwin_amd64.tar.gz
     darwin_amd64: sha256:f7d4322a80edb4bc8d4184171e2c2bbda1db769fd1cbac131e397c813de74c84
