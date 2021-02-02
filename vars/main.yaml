@@ -7,7 +7,7 @@ app_binary_dir: '{{ app_install_dir }}/{{ app_name }}'
 app_install_exe: '{{ app_binary_dir }}/{{ bin_name }}'
 app_install_link: '{{ app_install_dir }}/{{ bin_name }}'
 app_mirror: 'https://github.com/{{ namespace }}/{{ repo }}/releases/download'
-app_checksums_url: '{{ app_mirror }}/v{{ app_ver }}/{{ repo }}_{{ app_ver}}_checksums.txt'
+app_checksums_url: '{{ app_mirror }}/v{{ app_ver }}/flux_{{ app_ver}}_checksums.txt'
 app_checksum: |-
   {% if app_use_online_checksum %}
   sha256:{{ app_checksums_url }}
