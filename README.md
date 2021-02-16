@@ -47,6 +47,8 @@ If you want to use [moleculte](https://molecule.readthedocs.io/en/latest/install
 # Checkout
 $ git clone https://github.com/nicholaswilde/ansible-role-flux.git nicholaswilde.flux2
 $ cd nicholaswilde.flux2
+# Requirements
+$ ansible-galaxy role install -r requirements.yaml 
 # Test
 $ molecule test
 # Converge
