@@ -29,7 +29,9 @@ jobs:
           python-version: '3.x'
 
       - name: Install test dependencies.
-        run: pip3 install yamllint ansible-lint
+        # Ansible-lint depends on an ansible executable, but doesn't depend on
+        # one in the package. Instead, install it by hand here.
+        run: pip3 install yamllint ansible ansible-lint
 
       - name: Lint code.
         run: |
